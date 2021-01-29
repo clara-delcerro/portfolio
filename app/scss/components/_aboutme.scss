@@ -1,0 +1,52 @@
+/* ==========================================================================
+   ABOUT ME
+   ========================================================================== */
+
+.aboutme {
+   font-size: 0;
+   max-width: 880px;
+   margin: 0 auto;
+
+   &__col {
+      @media #{$tablet} {
+         display: inline-block;
+         vertical-align: top;
+      }
+
+      &:first-child {
+         @media #{$tablet} {
+            padding: 0 32px 0 0;
+            width: 30%;
+         }
+      }
+
+      &:last-child {
+         @media #{$tablet} {
+            padding: 0 0 0 32px;
+            width: 70%;
+         }
+      }
+   }
+
+   &__img {
+      max-width: 250px;
+      margin: 0 auto;
+
+      @media #{$tablet} {
+         margin: 0;
+         float: right;
+      }
+
+      &__img {
+         width: 100%;
+      }
+   }
+
+   &__title {
+      margin: 0;
+   }
+
+   &__subtitle {
+      margin: 8px 0 24px;
+   }
+}

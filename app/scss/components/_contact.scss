@@ -1,0 +1,47 @@
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+
+.contact {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+
+  &__content {
+    background-color: color-theme('primary');
+    padding: 16px;
+
+    @media #{$tablet} {
+      padding: 24px;
+    }
+  }
+
+  &__data {
+    border: 2px solid color-theme('white');
+    padding: 16px;
+
+    @media #{$tablet} {
+      padding: 24px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: color-theme('white')
+  }
+
+  &__paragraph {
+    margin: 24px 0;
+    color: color-theme('white');
+    @include text-setting('m');
+  }
+
+  &__link {
+    color: color-theme('white');
+    font-family: font-theme('text','medium');
+
+    &.no-touch:hover {
+      color: color-theme('black') !important;
+    }
+  }
+}

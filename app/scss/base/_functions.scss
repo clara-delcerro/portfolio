@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Functions
+   ========================================================================== */
+
+// Color theme
+
+@function color-theme($key: 'primary', $variant: 'base') {
+  $map: map-get($color-theme, $key);
+  @return map-get($map, $variant);
+}
+
+// background-color: color-theme('primary', 'base'); // "primary base" color;
+
+// Text scale and line height
+
+@function text-scale($level) {
+  @return map-get(map-get($text-settings, $level), 'font-size');
+}
+
+@function line-height($level) {
+  @return map-get(map-get($text-settings, $level), 'line-height');
+}
+
+// @include text-setting('xs');
+
+// Font theme
+
+@function font-theme($key: 'text', $variant: 'regular') {
+  $map: map-get($font-theme, $key);
+  @return map-get($map, $variant);
+}

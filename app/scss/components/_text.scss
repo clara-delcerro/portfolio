@@ -1,0 +1,68 @@
+/* ==========================================================================
+   TEXTS
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: ($bl * 4) 0;
+  font-weight: normal;
+  color: color-theme('black','lighter');
+
+  b,
+  strong {
+    font-family: font-theme();
+    color: color-theme('black','lighter');
+  }
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: ($bl * 4) 0;
+  color: color-theme('black','lighter');
+}
+
+b,
+strong {
+  font-family: font-theme();
+  color: color-theme('black','lighter');
+}
+
+
+.title {
+  font-family: font-theme('text','extralight');
+  color: color-theme('grey','darker');
+  @include text-setting('xl');
+
+  @media #{$tablet} {
+    @include text-setting('xxxl');
+  }
+
+  &--small {
+    @include text-setting('l');
+
+    @media #{$tablet} {
+      @include text-setting('xl');
+    }
+  }
+}
+
+.subtitle {
+  font-family: font-theme('text','bold');
+  @include text-setting('base');
+  color: color-theme('grey','darker');
+
+  @media #{$tablet} {
+    @include text-setting('m');
+  }
+}
+
+.text {
+  font-family: font-theme('text','light');
+  @include text-setting('base');
+  color: color-theme('black','lighter');
+}

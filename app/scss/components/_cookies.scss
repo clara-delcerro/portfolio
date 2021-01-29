@@ -1,0 +1,60 @@
+/* ==========================================================================
+   COOKIES
+   ========================================================================== */
+
+.cookies {
+  width: 100%;
+  background: color-theme('black');
+  padding: ($bl * 2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1999;
+
+  &__btn {
+    display: inline-block;
+    padding: $bl;
+    @include text-setting('s');
+
+    &.no-touch:hover {
+      color: color-theme('white');
+    }
+
+    &.no-touch:active,
+    &:active {
+      color: color-theme('grey');
+    }
+
+    @media #{$tablet} {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -20px;
+    }
+  }
+
+  &__paragraph {
+    color: color-theme('white');
+    @include text-setting('s');
+    margin: 0 0 ($bl * 2);
+
+    @media #{$tablet} {
+      padding-right: 100px;
+      margin: 0;
+    }
+  }
+
+  a {
+    @include transition(.15s);
+
+    &.no-touch:hover {
+      color: color-theme('white');
+    }
+
+    &.no-touch:active,
+    &:active {
+      color: color-theme('grey');
+    }
+  }
+}

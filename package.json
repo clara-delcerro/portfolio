@@ -1,0 +1,38 @@
+{
+  "name": "solcom-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate with Gulp + Sass + Postcss + Jquery + Babel (optional)",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/Volumes/Web/template"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.4",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-cache": "^1.0.2",
+    "gulp-connect-php": "1.0.3",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.5",
+    "postcss": "^6.0.22",
+    "postcss-cssnext": "^3.1.0",
+    "run-sequence": "^2.2.1"
+  }
+}

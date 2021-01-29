@@ -1,0 +1,161 @@
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  // padding-top: 118px;
+
+  // @media #{$desktop} {
+  //   padding-top: 88px;
+  // }
+
+  &__wrapper {
+    max-width: 1144px;
+    padding: 0 16px;
+    margin: 0 auto;
+
+    @media #{$tablet} {
+      padding: 0 90px;
+    }
+  }
+
+  &__table {
+    display: table;
+    z-index: 19;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 510px;
+
+    @media #{$tablet} {
+      max-height: 650px;
+    }
+  }
+
+  &__cell {
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 72px;
+
+    @media #{$tablet} {
+      vertical-align: middle;
+      padding-top: 0;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    background-color: color-theme('primary');
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 24px 16px;
+
+    @media #{$tablet} {
+      padding: 32px;
+    }
+  }
+
+  &__img {
+    max-width: 150px;
+    margin: 0 auto 24px;
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    color: color-theme('white');
+    @include text-setting('xm');
+    font-family: font-theme('text','extralight');
+    margin: 0 0 16px;
+    color: color-theme('white');
+
+    @media #{$tablet} {
+      @include text-setting('xxxl');
+    }
+  }
+
+  &__subtitle {
+    @include text-setting('base');
+    font-family: font-theme('text','medium');
+    margin: 0;
+    color: color-theme('white');
+
+    @media #{$tablet} {
+      @include text-setting('xm');
+    }
+  }
+
+  &__text {
+    color: color-theme('white');
+    font-family: font-theme('text','regular');
+    margin: 0 auto 16px;
+    @include text-setting('m');
+    max-width: 500px;
+
+    &--small {
+      @include text-setting('base');
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: -110;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: 50%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__btn-scroll {
+    position: absolute;
+    z-index: 29;
+    bottom: 40px;
+    left: 50%;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-left: -16px;
+    border-radius: 50%;
+    color: color-theme('white');
+    background-color: color-theme('primary');
+    text-decoration: none;
+    transition: .2s;
+
+    @media #{$tablet} {
+      bottom: 64px;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      animation: scroll 1s linear infinite;
+      @include text-setting('m');
+      margin: -8px 0 0 -6px;
+    }
+
+    // States
+
+    &.no-touch:hover {
+      transform: scale(1.05);
+      background-color: color-theme('primary','shiny');
+    }
+
+    &.no-touch:active,
+    &:active {
+      opacity: .7;
+    }
+  }
+}

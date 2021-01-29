@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Project
+   ========================================================================== */
+
+.project {
+   font-size: 0;
+   max-width: 1180px;
+   margin: 0 auto;
+
+   &__col {
+      margin: 0 0 24px;
+
+      &:last-child {
+         margin: 0;
+      }
+      
+      @media #{$tablet} {
+         display: inline-block;
+         vertical-align: top;
+         width: 25%;
+      }
+   }
+
+   &__row {
+      @media #{$tablet} {
+         margin: 0 -16px;
+      }
+   }
+}

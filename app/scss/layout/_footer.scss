@@ -1,0 +1,23 @@
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.footer {
+   background-color: color-theme('primary');
+
+   &__wrapper {
+      padding: 16px;
+      max-width: 1180px;
+      margin: 0 auto;
+
+      @media #{$tablet} {
+         padding: 24px;
+      }
+   }
+
+   &__copyright {
+      margin: 0;
+      text-align: center;
+      color: color-theme('white');
+   }
+}

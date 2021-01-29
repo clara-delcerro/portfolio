@@ -1,0 +1,294 @@
+/* ==========================================================================
+   SKILLS
+   ========================================================================== */
+
+.progress {
+  text-align: center;
+  max-width: 880px;
+  margin: 0 auto;
+
+  font-size: 0;
+  
+}
+
+.progress-radial, .progress-radial * {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* -------------------------------------
+ * Bar container
+ * ------------------------------------- */
+.progress-radial {
+  position: relative;
+  border-radius: 50%;
+  margin: 8px;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  font-size: 0;
+
+  .text {
+    @include text-setting('s');
+  }
+
+  @media #{$tablet} {
+    width: 15%;
+    margin: 16px;
+
+    .text {
+      @include text-setting('base');
+    }
+  }
+}
+/* -------------------------------------
+ * Optional centered circle w/text
+ * ------------------------------------- */
+.progress-radial .overlay {
+  position: absolute;
+  width: 80%;
+  background-color: color-theme('white');
+  border-radius: 50%;
+  font-size: 14px;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.progress-radial .overlay p{
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+    top:50%;
+    margin-top: -20px;
+}
+
+/* -------------------------------------
+ * Mixin for progress-% class
+ * ------------------------------------- */
+.progress-0 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(0deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(90deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-5 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(342deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(108deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-10 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(324deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(126deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-15 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(306deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(144deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-20 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(288deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(162deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-25 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-30 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(252deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(198deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-35 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(234deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(216deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-40 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(216deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(234deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-45 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(198deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(252deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-50 {
+  background-image: -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(-90deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-55 {
+  background-image: -webkit-linear-gradient(162deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(-72deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-60 {
+  background-image: -webkit-linear-gradient(144deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(-54deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-65 {
+  background-image: -webkit-linear-gradient(126deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(-36deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-70 {
+  background-image: -webkit-linear-gradient(108deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(-18deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-75 {
+  background-image: -webkit-linear-gradient(90deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(0deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-80 {
+  background-image: -webkit-linear-gradient(72deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(18deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-85 {
+  background-image: -webkit-linear-gradient(54deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(36deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-90 {
+  background-image: -webkit-linear-gradient(36deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(54deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-95 {
+  background-image: -webkit-linear-gradient(18deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(72deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-100 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('primary','shiny') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('primary','shiny') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+
+
+.progress__software {
+
+  .progress-radial {
+    width: 25%;
+
+    @media #{$tablet} {
+      width: 10%;
+    }
+  }
+
+  .progress-0 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(0deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(90deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-5 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(342deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(108deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-10 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(324deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(126deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-15 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(306deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(144deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-20 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(288deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(162deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-25 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-30 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(252deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(198deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-35 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(234deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(216deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-40 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(216deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(234deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-45 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(198deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('white') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(252deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-50 {
+  background-image: -webkit-linear-gradient(180deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(-90deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-55 {
+  background-image: -webkit-linear-gradient(162deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(-72deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-60 {
+  background-image: -webkit-linear-gradient(144deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(-54deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-65 {
+  background-image: -webkit-linear-gradient(126deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(-36deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-70 {
+  background-image: -webkit-linear-gradient(108deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(-18deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-75 {
+  background-image: -webkit-linear-gradient(90deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(0deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-80 {
+  background-image: -webkit-linear-gradient(72deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(18deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-85 {
+  background-image: -webkit-linear-gradient(54deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(36deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-90 {
+  background-image: -webkit-linear-gradient(36deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(54deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-95 {
+  background-image: -webkit-linear-gradient(18deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(72deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+
+.progress-100 {
+  background-image: -webkit-linear-gradient(0deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+  background-image: linear-gradient(90deg, color-theme('blue') 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, color-theme('blue') 50%, color-theme('white') 50%, color-theme('white'));
+}
+}

@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "name": "solcom-boilerplate",
+  "launch_path": "/index.php",
+  "description": "Boilerplate with Gulp + Sass + Postcss + Jquery + Babel (optional)",
+  "icons": {
+    "128": "/assets/icons/icon-128x128.png",
+    "144": "/assets/icons/ms-touch-icon-144x144-precomposed.png",
+    "152": "/assets/icons/apple-touch-icon.png",
+    "192": "chrome-touch-icon-192x192"
+  },
+  "developer": {
+    "name": "Solcom S.L.",
+    "url": "http://www.solcomsl.com"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "es"
+}

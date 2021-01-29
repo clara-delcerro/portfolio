@@ -1,0 +1,85 @@
+/* ==========================================================================
+   NAV
+   ========================================================================== */
+
+.nav {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: color-theme('white');
+  transform: translateX(110%);
+  transition: transform .3s;
+
+  @media #{$tablet} {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    background: none;
+    transform: initial;
+    transition: transform 0;
+  }
+
+  &__list {
+    @extend %no-list;
+    font-size: 0;
+
+    @media #{$tablet} {
+      margin-top: 0;
+      border: none;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &__item {
+      position: relative;
+
+      @media #{$tablet} {
+        display: inline-block;
+      }
+    }
+
+    &__btn {
+      @extend %btn;
+      position: relative;
+      display: block;
+      padding: 16px;
+      font-family: font-theme('text', 'medium');
+      color: color-theme('white');
+      border-bottom: 1px solid color-theme('grey','light');
+      @include text-setting('base');
+      transition: .3s;
+
+      @media #{$tablet} {
+        width: auto;
+        border: none;
+      }
+
+      @media #{$desktop-l} {
+        padding: 24px 16px;
+      }
+
+      &.no-touch:hover {
+         color: color-theme('black','light');
+      }
+    }
+  }
+
+  // states
+  &.is-active {
+    transform: translateX(0);
+
+    .nav__list__btn {
+       color: color-theme('black','lighter');
+       text-align: center;
+       display: block;
+    }
+
+    @media #{$tablet} {
+      transform: initial;
+    }
+  }
+}

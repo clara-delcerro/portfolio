@@ -1,0 +1,46 @@
+/* ==========================================================================
+   SECTION
+   ========================================================================== */
+
+.section {
+  position: relative;
+  padding: 40px 0;
+  background: color-theme('white');
+
+  @media #{$tablet} { padding: 72px 0; }
+
+  &__wrapper {
+    @extend %child-no-margin;
+    @extend %wrapper;
+    padding: 0 16px;
+
+    @media #{$tablet} { padding: 0 32px; }
+    @media #{$desktop-l} { padding: 0 72px; }
+  }
+
+  &__title {
+    @extend .title;
+    text-align: center;
+    margin: 0 auto 24px;
+
+    @media #{$tablet} {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__anchor {
+    position: absolute;
+    top: -48px;
+    left: 0;
+
+    @media #{$desktop-l}  { top: -64px; }
+  }
+
+  &--grey {
+    background: color-theme('grey', 'light');
+
+    + .section--grey {
+      padding-top: 0;
+    }
+  }
+}

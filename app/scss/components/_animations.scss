@@ -1,0 +1,22 @@
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+@include keyframes(scroll) {
+  0%   { transform: translateY(0); opacity: 1; }
+  25%   { transform: translateY(6px); opacity: 0; }
+  26%   { transform: translateY(-6px); opacity: 0; }
+  50%   { transform: translateY(-6px); opacity: 0; }
+}
+
+.anim {
+  transform: translateY(16px);
+  transition: .5s cubic-bezier(.7,0,.3,1);
+
+  // States
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,153 @@
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header {
+   position: fixed;
+   z-index: 109;
+   top: 0;
+   left: 0;
+   right: 0;
+   background: color-theme("primary");
+
+   &__wrapper {
+      @extend %wrapper;
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      height: 56px;
+
+      @media #{$tablet} {
+         padding: 0 32px;
+      }
+
+      @media #{$desktop-l} {
+         padding: 0 72px;
+         height: 72px;
+      }
+   }
+
+   &__home {
+      align-self: center;
+
+      &__link {
+         display: inline-block;
+         text-decoration: none;
+         @include text-setting('m');
+         color: color-theme('white');
+         font-family: font-theme('text','extralight');
+         transition: .3s;
+
+         @media #{$tablet} {
+            @include text-setting('xm');
+         }
+
+         .ion {
+            color: color-theme('white');
+            @include text-setting('l');
+            margin-right: 8px;
+         }
+
+         &.no-touch:hover {
+            color: color-theme('black','light');
+
+            .ion {
+               color: color-theme('black','light');
+            }
+         }
+      }
+   }
+
+   &__nav {
+      align-self: center;
+
+      &__btn {
+         display: block;
+         width: 32px;
+         height: 32px;
+         text-align: center;
+         padding: 8px;
+         border-radius: 16px;
+         transition: 0.15s;
+         font-size: 0;
+
+         &.no-touch:hover {
+            background: color-theme("primary", "light");
+
+            .header__nav__btn__line {
+               color: color-theme('primary');
+            }
+         }
+
+         &.no-touch:active,
+         &:active {
+            opacity: 0.7;
+         }
+
+         &__lines {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+         }
+
+         &__line {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: color-theme("white");
+            transition: 0.15s;
+
+            &--top {
+               top: 0;
+               left: 0;
+            }
+
+            &--middle {
+               top: 50%;
+               left: 0;
+               margin-top: -1px;
+            }
+
+            &--bottom {
+               bottom: 0;
+               left: 0;
+            }
+         }
+
+         // States
+
+         &.is-active {
+            .header__nav__btn {
+               &__line {
+                  &--top {
+                     transform: translateY(7px) rotate(45deg);
+                  }
+
+                  &--middle {
+                     transform: scaleX(0);
+                  }
+
+                  &--bottom {
+                     transform: translateY(-7px) rotate(-45deg);
+                  }
+               }
+            }
+         }
+
+         &--menu {
+            @media #{$tablet} {
+               display: none;
+            }
+         }
+
+         &--search {
+            display: none;
+
+            @media #{$tablet} {
+               display: block;
+            }
+         }
+      }
+   }
+}

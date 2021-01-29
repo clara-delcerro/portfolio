@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+  font-family: "Manrope-ExtraLight";
+  src: url("../assets/fonts/Manrope-ExtraLight.woff") format("woff"),
+       url("../assets/fonts/Manrope-ExtraLight.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope-Light";
+  src: url("../assets/fonts/Manrope-Light.woff") format("woff"),
+       url("../assets/fonts/Manrope-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("../assets/fonts/Manrope-Regular.woff") format("woff"),
+       url("../assets/fonts/Manrope-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope-SemiBold";
+  src: url("../assets/fonts/Manrope-SemiBold.woff") format("woff"),
+       url("../assets/fonts/Manrope-SemiBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope-Medium";
+  src: url("../assets/fonts/Manrope-Medium.woff") format("woff"),
+       url("../assets/fonts/Manrope-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope-Bold";
+  src: url("../assets/fonts/Manrope-Bold.woff") format("woff"),
+       url("../assets/fonts/Manrope-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope-ExtraBold";
+  src: url("../assets/fonts/Manrope-ExtraBold.woff") format("woff"),
+       url("../assets/fonts/Manrope-ExtraBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+//eva
+
+@font-face {
+  font-family: "Eva-Icons";
+  src: url("../assets/fonts/Eva-Icons.eot") format("embedded-opentype"),
+       url("../assets/fonts/Eva-Icons.woff") format("woff"),
+       url("../assets/fonts/Eva-Icons.woff2") format("woff2"),
+       url("../assets/fonts/Eva-Icons.ttf") format("truetype"),
+       url("../assets/fonts/Eva-Icons.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
