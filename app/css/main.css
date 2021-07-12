@@ -1331,7 +1331,7 @@ select::-ms-expand {
     color: #fff; }
     @media (min-width: 48em) {
       .hero__subtitle {
-        font-size: 1.5rem;
+        font-size: 1.125rem;
         line-height: 1.5rem; } }
   .hero__text {
     color: #fff;

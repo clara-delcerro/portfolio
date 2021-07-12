@@ -84,7 +84,7 @@
     color: color-theme('white');
 
     @media #{$tablet} {
-      @include text-setting('xm');
+      @include text-setting('m');
     }
   }
 

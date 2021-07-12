@@ -13,7 +13,7 @@
             <!--end of hero__img-->
 
             <h1 class="hero__title">Clara del Cerro López</h1>
-            <h3 class="hero__subtitle">Maquetadora y diseñadora UI/UX</h3>
+            <h3 class="hero__subtitle">UX/UI / Maquetación / Front-end designer</h3>
           </div>
           <!--end of hero__content-->
         </div>
@@ -117,6 +117,11 @@
                     Sketch
                   </span>
                 </li>
+                <li class="chart__bar" style="width: 65%;">
+                  <span class="chart__label">
+                    Jquery
+                  </span>
+                </li>
                 <li class="chart__bar" style="width: 80%;">
                   <span class="chart__label">
                     Adobe Photoshop
@@ -125,11 +130,6 @@
                 <li class="chart__bar" style="width: 80%;">
                   <span class="chart__label">
                     Adobe Illustrator
-                  </span>
-                </li>
-                <li class="chart__bar" style="width: 40%;">
-                  <span class="chart__label">
-                    Jquery
                   </span>
                 </li>
                 <li class="chart__bar" style="width: 60%;">
