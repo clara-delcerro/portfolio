@@ -53,3 +53,73 @@
 
   Object.keys(map).forEach(function (id) { io.observe(map[id].el); });
 })();
+
+// filtro de proyectos por etiqueta (accesible con teclado, anuncia resultados con aria-live)
+(function () {
+  "use strict";
+  var box = document.getElementById("projectFilter");
+  var list = document.getElementById("projectList");
+  if (!box || !list) return;
+
+  var items = Array.prototype.slice.call(list.children);
+  var tags = [];
+  items.forEach(function (li) {
+    (li.getAttribute("data-tags") || "").split(",").forEach(function (t) {
+      t = t.trim();
+      if (t && tags.indexOf(t) === -1) tags.push(t);
+    });
+  });
+  if (tags.length < 2) return;
+
+  var order = (box.getAttribute("data-order") || "").split(",");
+  tags.sort(function (a, b) {
+    var ia = order.indexOf(a), ib = order.indexOf(b);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+  });
+
+  var group = document.createElement("div");
+  group.className = "filter__group";
+  group.setAttribute("role", "group");
+  group.setAttribute("aria-label", box.getAttribute("data-label"));
+
+  var status = document.createElement("p");
+  status.className = "filter__status";
+  status.setAttribute("role", "status");
+  status.setAttribute("aria-live", "polite");
+
+  var buttons = [];
+  function addButton(label, value) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "filter__btn";
+    b.textContent = label;
+    b.setAttribute("aria-pressed", "false");
+    b.setAttribute("data-value", value);
+    b.addEventListener("click", function () { apply(value); });
+    group.appendChild(b);
+    buttons.push(b);
+  }
+
+  function apply(value) {
+    var shown = 0;
+    items.forEach(function (li) {
+      var has = !value || (li.getAttribute("data-tags") || "").split(",").indexOf(value) !== -1;
+      li.hidden = !has;
+      if (has) shown++;
+    });
+    buttons.forEach(function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-value") === value ? "true" : "false");
+    });
+    var msg;
+    if (!value) msg = box.getAttribute("data-st-all");
+    else msg = box.getAttribute(shown === 1 ? "data-st-one" : "data-st-many");
+    status.textContent = msg.replace("{n}", shown).replace("{tag}", value);
+  }
+
+  addButton(box.getAttribute("data-all"), "");
+  tags.forEach(function (t) { addButton(t, t); });
+  box.appendChild(group);
+  box.appendChild(status);
+  buttons[0].setAttribute("aria-pressed", "true");
+  // el estado inicial no se anuncia: solo cambia al interactuar
+})();

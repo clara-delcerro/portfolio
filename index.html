@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clara del Cerro López — UI Engineer · Front-End Developer · UX/UI</title>
 <meta name="description" content="Portfolio de Clara del Cerro López: UI Engineer, desarrolladora front-end y diseñadora UX/UI con más de 8 años de experiencia. Angular, Astro, WordPress y desarrollo asistido por IA.">
-<meta name="theme-color" content="#0BCEAF">
+<meta name="theme-color" content="#2D3238">
 <link rel="alternate" hreflang="es" href="index.html">
 <link rel="alternate" hreflang="en" href="en/index.html">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -25,9 +25,9 @@
   <nav class="nav wrap" aria-label="Navegación principal">
     <a href="#" class="nav__brand">Clara<span>del Cerro</span>López</a>
     <ul class="nav__list" id="navList">
-      <li><a class="nav__link" href="#experiencia">Experiencia</a></li>
       <li><a class="nav__link" href="#proyectos">Proyectos</a></li>
       <li><a class="nav__link" href="#wordpress">WordPress</a></li>
+      <li><a class="nav__link" href="#experiencia">Experiencia</a></li>
       <li><a class="nav__link" href="#competencias">Competencias</a></li>
       <li><a class="nav__link" href="#sobre-mi">Sobre mí</a></li>
       <li><a class="nav__link" href="#contacto">Contacto</a></li>
@@ -57,8 +57,80 @@
         <li>8+ años de experiencia</li>
         <li>Madrid, España</li>
         <li><a href="mailto:claradelcerrolopez@gmail.com">claradelcerrolopez@gmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/clara-del-cerro-lopez" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.linkedin.com/in/clara-del-cerro-lopez" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
       </ul>
+    </div>
+  </section>
+
+  <section class="section" id="proyectos">
+    <div class="wrap">
+      <h2 class="section__title">Proyectos</h2>
+      <p class="section__lead">Mis trabajos más recientes y los de mi etapa en agencia.</p>
+      <div class="filter" id="projectFilter" data-label="Filtrar proyectos por etiqueta" data-all="Todos" data-order="WordPress,Front-End,UX/UI,IA"
+           data-st-all="Mostrando todos los proyectos ({n})" data-st-one="Mostrando 1 proyecto de {tag}" data-st-many="Mostrando {n} proyectos de {tag}"></div>
+      <ul class="projects" id="projectList">
+        <li data-tags="WordPress,UX/UI"><a class="project project--link" href="https://marshalbox.es/sentido-marshal/" target="_blank" rel="noopener">
+          <span class="project__meta">Marshal Box · Online</span>
+          <h3 class="project__title">Sentido Marshal</h3>
+          <p class="project__text">Diseño, desarrollo y publicación de la landing del cliente Marshal Box con WordPress y Elementor Pro.</p>
+          <ul class="project__tags" aria-label="Tags"><li>WordPress</li><li>UX/UI</li></ul>
+          <span class="project__stack">WordPress · Elementor Pro</span>
+          <span class="project__go">Ver web ↗<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+        </a></li>
+        <li data-tags="WordPress,UX/UI"><div class="project">
+          <span class="project__meta">Marshal Box · En curso</span>
+          <h3 class="project__title">Rediseño de Marshal Box</h3>
+          <p class="project__text">Rediseño y desarrollo de la web completa de marshalbox.es, con diseño de interfaces apoyado en IA. En curso: de momento solo la landing Sentido Marshal está online; el resto del sitio sigue en su versión anterior.</p>
+          <ul class="project__tags" aria-label="Tags"><li>WordPress</li><li>UX/UI</li></ul>
+          <span class="project__stack">WordPress · Elementor Pro · Claude Design</span>
+        </div></li>
+        <li data-tags="Front-End"><a class="project project--link" href="https://www.hyundai.com/es/es/zonaeco/" target="_blank" rel="noopener">
+          <span class="project__meta">Solcom SL · Agencia</span>
+          <h3 class="project__title">Zona ECO — Hyundai</h3>
+          <p class="project__text">Maquetación del portal ECO de Hyundai.</p>
+          <ul class="project__tags" aria-label="Tags"><li>Front-End</li></ul>
+          <span class="project__stack">HTML5 · SASS · AEM</span>
+          <span class="project__go">Ver web ↗<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+        </a></li>
+        <li data-tags="Front-End,UX/UI"><a class="project project--link" href="https://www.graficaslongares.com/" target="_blank" rel="noopener">
+          <span class="project__meta">Solcom SL · Agencia</span>
+          <h3 class="project__title">Gráficas Longares</h3>
+          <p class="project__text">Diseño y maquetación de la web responsive.</p>
+          <ul class="project__tags" aria-label="Tags"><li>Front-End</li><li>UX/UI</li></ul>
+          <span class="project__stack">HTML5 · SASS · JavaScript</span>
+          <span class="project__go">Ver web ↗<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+        </a></li>
+        <li data-tags="Front-End,UX/UI"><a class="project project--link" href="https://webinars.dolor.com/" target="_blank" rel="noopener">
+          <span class="project__meta">Solcom SL · Agencia</span>
+          <h3 class="project__title">Webinars Dolor.com</h3>
+          <p class="project__text">Diseño y maquetación de la web de webinars de dolor.com.</p>
+          <ul class="project__tags" aria-label="Tags"><li>Front-End</li><li>UX/UI</li></ul>
+          <span class="project__stack">HTML5 · SASS · JavaScript</span>
+          <span class="project__go">Ver web ↗<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+        </a></li>
+        <li data-tags="Front-End"><a class="project project--link" href="https://www.gourmets.net/club-vinos-gourmets" target="_blank" rel="noopener">
+          <span class="project__meta">Solcom SL · Agencia</span>
+          <h3 class="project__title">Club de Vinos Gourmets</h3>
+          <p class="project__text">Maquetación de la nueva página del club de vinos de gourmets.net.</p>
+          <ul class="project__tags" aria-label="Tags"><li>Front-End</li></ul>
+          <span class="project__stack">HTML5 · SASS · JavaScript</span>
+          <span class="project__go">Ver web ↗<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--grey" id="wordpress">
+    <div class="wrap">
+      <h2 class="section__title">WordPress y diseño web</h2>
+      <p class="section__lead">Diseño y desarrollo webs completas en WordPress, de la idea a la publicación.</p>
+      <dl class="points">
+        <div class="points__row"><dt>De la idea a la web publicada</dt><dd>Rediseño y construcción de webs completas, desde el diseño de interfaces hasta la publicación. La landing «Sentido Marshal» (ya online) y el rediseño de marshalbox.es (en curso) son los últimos ejemplos.</dd></div>
+        <div class="points__row"><dt>Diseño y maquetación responsive</dt><dd>Páginas en WordPress, cuidando la experiencia de usuario, la accesibilidad y el detalle visual. Tengo experiencia con Elementor Pro y me adapto con facilidad a otros temas, plantillas y constructores de páginas.</dd></div>
+        <div class="points__row"><dt>IA en el flujo de trabajo</dt><dd>Claude, Claude Design, Cursor y Codex para generar, revisar y depurar código, y para diseñar y prototipar interfaces.</dd></div>
+        <div class="points__row"><dt>Comunicación directa con el cliente</dt><dd>Recojo necesidades, presento propuestas y explico las decisiones técnicas de forma clara.</dd></div>
+        <div class="points__row"><dt>Criterio visual</dt><dd>Máster en Diseño Gráfico y experiencia en logotipos, folletos y catálogos con Photoshop, Illustrator e InDesign.</dd></div>
+      </dl>
     </div>
   </section>
 
@@ -67,7 +139,7 @@
       <h2 class="section__title">Experiencia</h2>
       <article class="job">
         <div class="job__meta">
-          <p class="job__dates">Agosto 2026 – Actualidad</p>
+          <p class="job__dates">Julio 2026 – Actualidad</p>
           <p class="job__company">Marshal Box</p>
           <p class="job__client">Madrid (remoto)</p>
         </div>
@@ -78,23 +150,22 @@
             <li>Diseño y maquetación de páginas responsive, cuidando la experiencia de usuario (UX/UI) y el detalle visual</li>
             <li>Diseño de las interfaces con IA (Claude Design) para explorar propuestas visuales y acelerar el prototipado</li>
             <li>Diseño, desarrollo y publicación de la landing «Sentido Marshal», ya online</li>
-            <li>Trato directo con el cliente: recojo necesidades, presento propuestas y explico las decisiones técnicas con claridad</li>
+            <li>Comunicación directa con el cliente: recojo necesidades, presento propuestas y explico las decisiones técnicas con claridad</li>
           </ul>
           <p class="job__stack"><strong>Stack:</strong> WordPress, Elementor Pro, Claude Design</p>
         </div>
       </article>
       <article class="job">
         <div class="job__meta">
-          <p class="job__dates">Enero 2026 – Actualidad</p>
+          <p class="job__dates">Enero 2026 – Agosto 2026</p>
           <p class="job__company">Decskill</p>
-          <p class="job__client">Cliente: Ávoris (grupo de viajes y turismo) · Remoto</p>
+          <p class="job__client">Remoto</p>
         </div>
         <div class="job__body">
           <h3 class="job__title">UI Engineer y Desarrolladora Front-End</h3>
           <ul class="job__list">
-            <li>Desarrollo y mantenimiento de las interfaces web de los productos digitales de Ávoris, junto a los equipos de IA, UX/UI y desarrollo</li>
-            <li>Más de 7 proyectos web en un equipo de 22 personas, 6 de ellas front-end</li>
-            <li>Proyectos levantados casi desde cero con Angular, Astro y Strapi, dentro de la arquitectura definida</li>
+            <li>Desarrollo de interfaces web con Angular, Astro y Strapi junto a los equipos de IA, UX/UI y desarrollo</li>
+            <li>Proyectos web levantados casi desde cero, dentro de la arquitectura definida</li>
             <li>Colaboración en el flujo de trabajo con Strapi y en el sistema basado en Astro; uso intensivo de Astro para interfaces rápidas y orientadas a contenido</li>
             <li>IA a diario (Claude, Cursor, Codex) para generar, revisar y depurar código, mejorar su calidad y automatizar tareas</li>
             <li>Diseño y prototipado de interfaces con IA (Claude Design) antes de desarrollar</li>
@@ -160,70 +231,6 @@
     </div>
   </section>
 
-  <section class="section section--grey" id="proyectos">
-    <div class="wrap">
-      <h2 class="section__title">Proyectos</h2>
-      <p class="section__lead">Una selección de mis trabajos más recientes y de proyectos anteriores en agencia.</p>
-      <ul class="projects">
-        <li><a class="project project--link" href="https://marshalbox.es/sentido-marshal/" target="_blank" rel="noopener">
-          <span class="project__meta">Marshal Box · Online</span>
-          <h3 class="project__title">Sentido Marshal</h3>
-          <p class="project__text">Diseño, desarrollo y publicación de la landing del cliente Marshal Box con WordPress y Elementor Pro.</p>
-          <span class="project__stack">WordPress · Elementor Pro</span>
-          <span class="project__go">Ver web ↗</span>
-        </a></li>
-        <li><div class="project">
-          <span class="project__meta">Marshal Box · En curso</span>
-          <h3 class="project__title">Rediseño de Marshal Box</h3>
-          <p class="project__text">Rediseño y desarrollo de la web completa de marshalbox.es, con diseño de interfaces apoyado en IA. En curso: de momento solo la landing Sentido Marshal está online; el resto del sitio sigue en su versión anterior.</p>
-          <span class="project__stack">WordPress · Elementor Pro · Claude Design</span>
-        </div></li>
-        <li><a class="project project--link" href="https://www.hyundai.com/es/es/zonaeco/" target="_blank" rel="noopener">
-          <span class="project__meta">Solcom SL</span>
-          <h3 class="project__title">Zona ECO — Hyundai</h3>
-          <p class="project__text">Maquetación del portal ECO de Hyundai.</p>
-          <span class="project__stack">HTML5 · SASS · AEM</span>
-          <span class="project__go">Ver web ↗</span>
-        </a></li>
-        <li><a class="project project--link" href="https://www.graficaslongares.com/" target="_blank" rel="noopener">
-          <span class="project__meta">Solcom SL</span>
-          <h3 class="project__title">Gráficas Longares</h3>
-          <p class="project__text">Diseño y maquetación de la web responsive.</p>
-          <span class="project__stack">HTML5 · SASS · JavaScript</span>
-          <span class="project__go">Ver web ↗</span>
-        </a></li>
-        <li><a class="project project--link" href="https://webinars.dolor.com/" target="_blank" rel="noopener">
-          <span class="project__meta">Solcom SL</span>
-          <h3 class="project__title">Webinars Dolor.com</h3>
-          <p class="project__text">Diseño y maquetación de la web de webinars de dolor.com.</p>
-          <span class="project__stack">HTML5 · SASS · JavaScript</span>
-          <span class="project__go">Ver web ↗</span>
-        </a></li>
-        <li><a class="project project--link" href="https://www.gourmets.net/club-vinos-gourmets" target="_blank" rel="noopener">
-          <span class="project__meta">Solcom SL</span>
-          <h3 class="project__title">Club de Vinos Gourmets</h3>
-          <p class="project__text">Maquetación de la nueva página del club de vinos de gourmets.net.</p>
-          <span class="project__stack">HTML5 · SASS · JavaScript</span>
-          <span class="project__go">Ver web ↗</span>
-        </a></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="wordpress">
-    <div class="wrap">
-      <h2 class="section__title">WordPress y diseño web</h2>
-      <p class="section__lead">Diseño y desarrollo webs completas en WordPress y Elementor Pro, en trato directo con el cliente.</p>
-      <dl class="points">
-        <div class="points__row"><dt>De la idea a la web publicada</dt><dd>Rediseño y construcción de webs completas, desde el diseño de interfaces hasta la publicación. La landing «Sentido Marshal» (ya online) y el rediseño de marshalbox.es (en curso) son los últimos ejemplos.</dd></div>
-        <div class="points__row"><dt>Diseño y maquetación responsive</dt><dd>Páginas con Elementor Pro, cuidando la experiencia de usuario, la accesibilidad y el detalle visual. Me adapto con facilidad a otros temas y plantillas.</dd></div>
-        <div class="points__row"><dt>IA en el flujo de trabajo</dt><dd>Claude, Claude Design, Cursor y Codex para generar, revisar y depurar código, y para diseñar y prototipar interfaces.</dd></div>
-        <div class="points__row"><dt>Trato directo con el cliente</dt><dd>Recojo necesidades, presento propuestas y explico las decisiones técnicas de forma clara.</dd></div>
-        <div class="points__row"><dt>Criterio visual</dt><dd>Máster en Diseño Gráfico y experiencia en logotipos, folletos y catálogos con Photoshop, Illustrator e InDesign.</dd></div>
-      </dl>
-    </div>
-  </section>
-
   <section class="section section--dark" id="competencias">
     <div class="wrap">
       <h2 class="section__title">Competencias</h2>
@@ -273,7 +280,7 @@
 <footer class="footer" id="contacto">
   <div class="wrap">
     <p class="footer__lead">¿Hablamos?</p>
-    <p class="footer__contact"><a href="mailto:claradelcerrolopez@gmail.com">claradelcerrolopez@gmail.com</a><a href="https://www.linkedin.com/in/clara-del-cerro-lopez" target="_blank" rel="noopener">LinkedIn</a></p>
+    <p class="footer__contact"><a href="mailto:claradelcerrolopez@gmail.com">claradelcerrolopez@gmail.com</a><a href="https://www.linkedin.com/in/clara-del-cerro-lopez" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (se abre en una pestaña nueva)</span></a></p>
     <p class="footer__cv"><a class="btn btn--line" href="assets/CV-Clara-del-Cerro-ES.pdf" download>Descargar CV</a></p>
     <p class="footer__meta">Clara del Cerro López · Madrid, España</p>
   </div>

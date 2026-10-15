@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TODO: quitar noindex cuando el caso esté listo para publicar -->
+<meta name="robots" content="noindex">
+<title>{{TITLE}} — Clara del Cerro López</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="theme-color" content="#2D3238">
+<link rel="alternate" hreflang="es" href="../../proyectos/{{SLUG}}/">
+<link rel="alternate" hreflang="en" href="../../en/projects/{{SLUG}}/">
+<link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../img/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<!-- Plantilla de caso de estudio: máximo una pantalla de texto, el resto son imágenes. -->
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<header class="header">
+  <nav class="nav wrap" aria-label="Navegación principal">
+    <a href="../../index.html" class="nav__brand">Clara<span>del Cerro</span>López</a>
+    <ul class="nav__list" id="navList">
+      <li><a class="nav__link" href="../../index.html#proyectos">Proyectos</a></li>
+      <li><a class="nav__link" href="../../index.html#wordpress">WordPress</a></li>
+      <li><a class="nav__link" href="../../index.html#experiencia">Experiencia</a></li>
+      <li><a class="nav__link" href="../../index.html#competencias">Competencias</a></li>
+      <li><a class="nav__link" href="../../index.html#sobre-mi">Sobre mí</a></li>
+      <li><a class="nav__link" href="../../index.html#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav__side">
+      <div class="lang" role="group" aria-label="Idioma"><span class="lang__opt lang__opt--on" aria-current="true">ES</span><a class="lang__opt" href="../../en/projects/{{SLUG}}/" lang="en" hreflang="en">EN</a></div>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main" class="case">
+  <div class="wrap">
+
+    <!-- 1. RESUMEN -->
+    <p class="case__eyebrow">Proyecto</p>
+    <h1 class="case__title">{{TITLE}}</h1>
+    <p class="case__intro">{{INTRO}}</p>
+    <dl class="case__summary" aria-label="Resumen">
+      <div><dt>Rol</dt><dd>{{ROLE}}</dd></div>
+      <div><dt>Duración</dt><dd>{{DURATION}}</dd></div>
+      <div><dt>Herramientas</dt><dd>{{TOOLS}}</dd></div>
+      <div><dt>Enlace</dt><dd><a href="{{LINK_URL}}" target="_blank" rel="noopener">{{LINK_TEXT}}<span class="sr-only"> (↗)</span></a></dd></div>
+      <div><dt>Etiquetas</dt><dd>{{TAGS}}</dd></div>
+    </dl>
+    <!-- Si es un rediseño no encargado, añade aquí el aviso obligatorio:
+    <p class="todo-note">Rediseño conceptual, no encargado por la marca.</p> -->
+
+    <!-- 2. PROBLEMA (2–3 frases) -->
+    <section class="case__block" aria-labelledby="h-problem">
+      <h2 class="case__h" id="h-problem">Problema</h2>
+      <p class="case__text">{{PROBLEMA}}</p>
+    </section>
+
+    <!-- 3. PROCESO: análisis → wireframes → diseño → desarrollo -->
+    <section class="case__block" aria-labelledby="h-process">
+      <h2 class="case__h" id="h-process">Proceso</h2>
+      <ol class="steps">
+          <li><strong>Análisis</strong>{{PASO_ANALISIS}}</li>
+          <li><strong>Wireframes</strong>{{PASO_WIREFRAMES}}</li>
+          <li><strong>Diseño</strong>Figma / Claude Design: {{PASO_DISENO}}</li>
+          <li><strong>Desarrollo</strong>{{PASO_DESARROLLO}}</li>
+      </ol>
+    </section>
+
+    <!-- 4. DECISIONES (3, cada una con su motivo) -->
+    <section class="case__block" aria-labelledby="h-decisions">
+      <h2 class="case__h" id="h-decisions">Decisiones</h2>
+      <ul class="decisions">
+          <li><strong>{{DECISION_1}}</strong><span>Motivo: {{MOTIVO_1}}</span></li>
+          <li><strong>{{DECISION_2}}</strong><span>Motivo: {{MOTIVO_2}}</span></li>
+          <li><strong>{{DECISION_3}}</strong><span>Motivo: {{MOTIVO_3}}</span></li>
+      </ul>
+    </section>
+
+    <!-- 5. RESULTADO: capturas antes/después (escritorio y móvil) + Lighthouse.
+         Imágenes en assets/projects/{{SLUG}}/ en WebP, con width y height.
+         loading="lazy" en todas salvo la primera (esa va sin el atributo). -->
+    <section class="case__block" aria-labelledby="h-result">
+      <h2 class="case__h" id="h-result">Resultado</h2>
+      <div class="figures">
+        <figure class="figure">
+          <!-- TODO Clara: captura antes (escritorio). La primera imagen NO lleva loading="lazy". -->
+          <img src="../../assets/projects/{{SLUG}}/before-desktop.webp" width="1440" height="900" alt="{{ALT_BEFORE_DESKTOP}}">
+          <figcaption>Antes · escritorio</figcaption>
+        </figure>
+        <figure class="figure">
+          <!-- TODO Clara: captura después (escritorio) -->
+          <img src="../../assets/projects/{{SLUG}}/after-desktop.webp" width="1440" height="900" alt="{{ALT_AFTER_DESKTOP}}" loading="lazy">
+          <figcaption>Después · escritorio</figcaption>
+        </figure>
+        <figure class="figure">
+          <!-- TODO Clara: captura antes (móvil) -->
+          <img src="../../assets/projects/{{SLUG}}/before-mobile.webp" width="390" height="844" alt="{{ALT_BEFORE_MOBILE}}" loading="lazy">
+          <figcaption>Antes · móvil</figcaption>
+        </figure>
+        <figure class="figure">
+          <!-- TODO Clara: captura después (móvil) -->
+          <img src="../../assets/projects/{{SLUG}}/after-mobile.webp" width="390" height="844" alt="{{ALT_AFTER_MOBILE}}" loading="lazy">
+          <figcaption>Después · móvil</figcaption>
+        </figure>
+      </div>
+      <!-- TODO Clara: puntuaciones de Lighthouse (rellenar con los datos reales) -->
+      <table class="lh">
+        <caption>Puntuaciones de Lighthouse</caption>
+        <thead><tr><th scope="col">Métrica</th><th scope="col">Antes</th><th scope="col">Después</th></tr></thead>
+        <tbody>
+      <tr><th scope="row">Rendimiento</th><td>—</td><td>—</td></tr>
+      <tr><th scope="row">Accesibilidad</th><td>—</td><td>—</td></tr>
+      <tr><th scope="row">Buenas prácticas</th><td>—</td><td>—</td></tr>
+      <tr><th scope="row">SEO</th><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 6. USO DE IA -->
+    <section class="case__block" aria-labelledby="h-ai">
+      <h2 class="case__h" id="h-ai">Uso de IA</h2>
+      <p class="case__text"><strong>Qué hice con IA:</strong> {{IA_HECHO}}</p>
+      <p class="case__text"><strong>Qué revisé o corregí a mano:</strong> {{IA_REVISADO}}</p>
+    </section>
+
+    <!-- 7. NAVEGACIÓN entre proyectos (si no hay anterior o siguiente, borra ese enlace) -->
+    <nav class="case__nav" aria-label="Todos los proyectos">
+      <a href="{{PREV_URL}}"><span class="case__nav-kicker">← Proyecto anterior</span><span class="case__nav-title">{{PREV_TITLE}}</span></a>
+      <a href="{{NEXT_URL}}"><span class="case__nav-kicker">Proyecto siguiente →</span><span class="case__nav-title">{{NEXT_TITLE}}</span></a>
+    </nav>
+  </div>
+</main>
+
+<footer class="footer" id="contacto">
+  <div class="wrap">
+    <p class="footer__lead">Contacto</p>
+    <p class="footer__contact"><a href="mailto:claradelcerrolopez@gmail.com">claradelcerrolopez@gmail.com</a><a href="https://www.linkedin.com/in/clara-del-cerro-lopez" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (↗)</span></a></p>
+    <p class="footer__meta">Clara del Cerro López · Madrid, España</p>
+  </div>
+</footer>
+
+<script src="../../script.js"></script>
+</body>
+</html>
