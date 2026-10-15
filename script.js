@@ -5,15 +5,30 @@
   var list = document.getElementById("navList");
 
   if (toggle && list) {
-    toggle.addEventListener("click", function () {
-      var open = list.classList.toggle("nav__list--open");
+    var root = document.documentElement;
+    var setMenu = function (open) {
+      if (open) {
+        var header = document.querySelector(".header");
+        if (header) list.style.top = header.getBoundingClientRect().bottom + "px";
+      }
+      list.classList.toggle("nav__list--open", open);
+      root.classList.toggle("menu-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    toggle.addEventListener("click", function () {
+      setMenu(!list.classList.contains("nav__list--open"));
     });
     list.addEventListener("click", function (ev) {
-      if (ev.target.closest(".nav__link")) {
-        list.classList.remove("nav__list--open");
-        toggle.setAttribute("aria-expanded", "false");
+      if (ev.target.closest(".nav__link")) setMenu(false);
+    });
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && list.classList.contains("nav__list--open")) {
+        setMenu(false);
+        toggle.focus();
       }
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 720) setMenu(false);
     });
   }
 
